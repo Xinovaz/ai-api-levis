@@ -1,0 +1,1 @@
+/mnt/c/Users/Sam/Documents/GitHub/ai-api-levis/levisai/target/x86_64-apple-darwin/debug/levisai: /mnt/c/Users/Sam/Documents/GitHub/ai-api-levis/levisai/src/main.rs /mnt/c/Users/Sam/Documents/GitHub/ai-api-levis/levisai/src/sys_cmd.txt
