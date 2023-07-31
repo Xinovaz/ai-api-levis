@@ -91,7 +91,7 @@ struct APIResponseUsageStatistics {
 #[tokio::main]
 async fn main() {
     let system_command = SYS.to_string();
-    let input = fs::read_to_string("analyze.txt").unwrap();
+    let input = fs::read_to_string("./analyze.txt").unwrap();
 
     let message = APIMessage::new("user".to_string(), input);
 
