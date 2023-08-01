@@ -6,6 +6,7 @@ use serde::{Serialize, Deserialize};
 use serde_json;
 use std::fs;
 use std::io;
+use std::env;
 
 const MODEL: &str = "gpt-4";
 const SYS: &str = include_str!("sys_cmd.txt");
@@ -90,8 +91,12 @@ struct APIResponseUsageStatistics {
 
 #[tokio::main]
 async fn main() {
+
     let system_command = SYS.to_string();
-    let input = fs::read_to_string("./analyze.txt").unwrap();
+    let mut args = env::args();
+    let _ = args.next();
+    let path = args.next().unwrap();
+    let input = fs::read_to_string(&path).unwrap();
 
     let message = APIMessage::new("user".to_string(), input);
 
