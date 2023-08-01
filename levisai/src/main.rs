@@ -11,7 +11,7 @@ use std::env;
 const MODEL: &str = "gpt-4";
 const SYS: &str = include_str!("sys_cmd.txt");
 
-const API_KEY: &str = "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";
+const API_KEY: &str = "<API KEY>";
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct APIRequest {
